@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>식단 추천 - Pick & Cook</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <img src="pnc-logo.png" alt="PnC 로고" class="logo-xlarge">
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="recommend.html">식단 추천</a>
+      <a href="delivery.html">배송 서비스</a>
+      <a href="community.html">커뮤니티</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2>나에게 맞는 식단을 찾아볼까요?</h2>
+    <form class="horizontal-form" action="recommend_result.html" method="get">
+      <div class="form-card">
+        <h3>1. 식단 목적</h3>
+        <label><input type="radio" name="goal" value="diet"> 다이어트</label><br><br>
+        <label><input type="radio" name="goal" value="muscle"> 근육 증가</label><br><br>
+        <label><input type="radio" name="goal" value="health"> 건강 유지</label>
+      </div>
+
+      <div class="form-card">
+        <h3>2. 알러지</h3>
+        <label><input type="checkbox" name="allergy" value="milk"> 유제품</label><br><br>
+        <label><input type="checkbox" name="allergy" value="nuts"> 견과류</label><br><br>
+        <label><input type="checkbox" name="allergy" value="gluten"> 글루텐</label><br><br>
+        <label><input type="checkbox" name="allergy" value="none"> 없음</label>
+      </div>
+
+      <div class="form-card">
+        <h3>3. 선호 음식</h3>
+        <label><input type="checkbox" name="preference" value="korean"> 한식</label><br><br>
+        <label><input type="checkbox" name="preference" value="western"> 양식</label><br><br>
+        <label><input type="checkbox" name="preference" value="japanese"> 일식</label><br><br>
+        <label><input type="checkbox" name="preference" value="chinese"> 중식</label><br><br>
+        <label><input type="checkbox" name="preference" value="vegan"> 비건/채식</label>
+      </div>
+      <div style="text-align:center; margin-top: 30px;">
+        <button type="submit" class="cta-btn">추천 받기</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
