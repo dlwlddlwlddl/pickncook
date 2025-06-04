@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배송 신청 - Pick & Cook</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .request-layout {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .delivery-form-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+    .delivery-form {
+      font-size: 18px;
+    }
+    .delivery-form h2 {
+      font-size: 30px;
+      color: #8B1E3F;
+      margin-bottom: 20px;
+    }
+    .delivery-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    .delivery-form input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .delivery-form button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-size: 18px;
+      background-color: #8B1E3F;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .delivery-form button:hover {
+      background-color: #6a162e;
+    }
+    .map-square {
+      flex: 1;
+      min-width: 300px;
+    }
+    .map-square iframe {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pnc-logo.png" alt="PnC 로고" class="logo-xlarge">
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="recommend.html">식단 추천</a>
+      <a href="delivery.html">배송 서비스</a>
+      <a href="community.html">커뮤니티</a>
+    </nav>
+  </header>
+
+  <main class="content request-layout">
+    <div class="delivery-form-wrapper">
+      <form class="delivery-form" action="delivery_confirm.html" method="get">
+        <h2>배송지를 입력해주세요</h2>
+        <label for="address">배송지 주소</label>
+        <input type="text" id="address" name="address" placeholder="예: 서울시 강남구 테헤란로 123">
+
+        <label for="name">받는 사람 이름</label>
+        <input type="text" id="name" name="name" placeholder="예: 이지우">
+
+        <label for="phone">연락처</label>
+        <input type="text" id="phone" name="phone" placeholder="예: 010-1234-5678">
+
+        <button type="submit">배송 요청하기</button>
+      </form>
+    </div>
+    <div class="map-square">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.840705790295!2d127.0362409!3d37.5111637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1581680d65d%3A0x909720f6ab47f259!2z7JWI64Ko7Yq47Yq567OE7IucIOuPmeq1rA!5e0!3m2!1sko!2skr!4v1687597744407!5m2!1sko!2skr"
+        allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </main>
+</body>
+</html>

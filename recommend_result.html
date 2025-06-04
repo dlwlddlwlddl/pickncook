@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>추천 결과 - Pick & Cook</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .result-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      flex-wrap: wrap;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .result-text {
+      flex: 2;
+      font-size: 20px;
+    }
+
+    .result-image {
+      flex: 1;
+    }
+
+    .result-image img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .meal-list {
+      font-size: 22px;
+      line-height: 2.2;
+    }
+
+    .meal-highlight {
+      font-weight: bold;
+      color: #8B1E3F;
+      font-size: 24px;
+    }
+
+    .meal-item {
+      font-weight: bold;
+    }
+
+    .meal-benefit {
+      color: #444;
+      font-size: 18px;
+      margin-left: 12px;
+      font-style: italic;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #222;
+    }
+
+    .cta-btn {
+      margin-top: 30px;
+      padding: 16px 48px;
+      font-size: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .result-flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="pnc-logo.png" alt="PnC 로고" class="logo-xlarge">
+    <nav>
+      <a href="index.html">홈</a>
+      <a href="recommend.html">식단 추천</a>
+      <a href="delivery.html">배송 서비스</a>
+      <a href="community.html">커뮤니티</a>
+    </nav>
+  </header>
+
+  <main class="content result-flex">
+    <div class="result-text">
+      <h2>추천된 맞춤 식단 예시</h2>
+      <ul class="meal-list">
+        <li><span class="meal-highlight">아침:</span> <span class="meal-item">오트밀 + 블루베리 + 두유</span>
+          <span class="meal-benefit">— 식이섬유 풍부, 가벼운 포만감으로 하루 시작</span></li>
+        <li><span class="meal-highlight">점심:</span> <span class="meal-item">현미밥 + 닭가슴살 + 브로콜리</span>
+          <span class="meal-benefit">— 고단백 저지방, 에너지 충전용 균형 식단</span></li>
+        <li><span class="meal-highlight">저녁:</span> <span class="meal-item">채소 샐러드 + 구운 연어</span>
+          <span class="meal-benefit">— 저탄수화물, 심플하면서 영양 가득</span></li>
+      </ul>
+      <div>
+        <a href="delivery_request.html" class="cta-btn">배송 신청하기</a>
+      </div>
+    </div>
+    <div class="result-image">
+      <img src="https://cdn.pixabay.com/photo/2016/03/05/19/02/salmon-1238248_1280.jpg" alt="추천 식단 이미지">
+    </div>
+  </main>
+</body>
+</html>
